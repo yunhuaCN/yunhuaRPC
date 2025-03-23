@@ -1,6 +1,7 @@
 package Server;
 
 import Server.provider.ServiceProvider;
+import Server.server.Impl.NettyRPCRPCServer;
 import Server.server.Impl.RpcServerImpl;
 import Server.server.Impl.ThreadPoolRPCRPCServer;
 import Server.server.RpcServer;
@@ -15,7 +16,7 @@ public class TestServer {
         ServiceProvider serviceProvider=new ServiceProvider();
         serviceProvider.provideServiceInterface(userService);
 
-        RpcServer rpcServer=new RpcServerImpl(serviceProvider);
+        RpcServer rpcServer=new NettyRPCRPCServer(serviceProvider);
         rpcServer.start(9999);
     }
 

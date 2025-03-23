@@ -46,7 +46,7 @@ public class WorkThread implements Runnable{
         try {
             method = service.getClass().getMethod(rpcRequest.getMethodName(),rpcRequest.getParamTypes());
             Object invoke = method.invoke(service,rpcRequest.getParams());
-            return RpcResponse.sucess(invoke);
+            return RpcResponse.success(invoke);
         } catch (InvocationTargetException | NoSuchMethodException | IllegalAccessException e) {
             e.printStackTrace();
             System.out.println(MessageConstants.METHOD_EXECUTION_ERROR);

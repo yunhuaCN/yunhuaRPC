@@ -1,3 +1,4 @@
+package Client;
 
 import Client.proxy.ClientProxy;
 import common.pojo.User;

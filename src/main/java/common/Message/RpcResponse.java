@@ -22,7 +22,7 @@ public class RpcResponse {
 
     //使用构建器模式构建信息
     //构造成功信息
-    public static RpcResponse sucess(Object data) {
+    public static RpcResponse success(Object data) {
         return RpcResponse.builder()
                 .code(MessageConstants.SUCCESS)
                 .data(data)
